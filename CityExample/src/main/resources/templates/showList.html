@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<h2>List of items in your shopping cart</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Cost</th>
+    </tr>
+
+    <tr th:each="list : ${list}">
+        <td th:text="${list.id}">id</td>
+        <td th:text="${list.name}">name</td>
+        <td th:text="${list.amount}">amount</td>
+        <td th:text="${list.cost}">cost</td>
+    </tr>
+</table>
+
+</body>
+</html>
